@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capital Cloud Trading - Brand Book</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        :root {
+            --primary-color: #2263ae;
+            --secondary-color: #243243;
+            --background-color: #F7F7F7;
+            --text-color: #4D4D4D;
+            --footer-bg-color: #243243;
+            --highlight-color: #FFC857;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #FFFFFF;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header .logo {
+            max-width: 250px;
+            margin: 0 auto 10px;
+            display: block;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 5px 10px;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 2px;
+            background-color: var(--highlight-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .hero {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            color: #FFFFFF;
+            text-align: center;
+            padding: 60px 20px;
+            margin: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease;
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: 3.5rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            margin: 15px 0;
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+
+        .hero .button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: var(--highlight-color);
+            color: var(--secondary-color);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .hero .button:hover {
+            background-color: #e0b34c;
+            transform: translateY(-3px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section {
+            background-color: #FFFFFF;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--highlight-color);
+            color: #FFFFFF;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #d4a743;
+        }
+
+        .color-swatch {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+
+        .color-box {
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFFFFF;
+            font-weight: 700;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .color-box:hover {
+            transform: scale(1.1);
+        }
+
+        .color-box.primary {
+            background-color: var(--primary-color);
+        }
+
+        .color-box.secondary {
+            background-color: var(--secondary-color);
+        }
+
+        .color-box.highlight {
+            background-color: var(--highlight-color);
+        }
+
+        footer {
+            background-color: var(--footer-bg-color);
+            color: #FFFFFF;
+            text-align: center;
+            padding: 20px 0;
+            animation: fadeIn 1s ease;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .color-swatch {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.svg" alt="Capital Cloud Trading Logo" class="logo">
+        <nav>
+            <a href="#about">About Us</a>
+            <a href="#values">Values</a>
+            <a href="#services">Services</a>
+            <a href="#visual-identity">Visual Identity</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Empowering Innovation</h1>
+        <p>Driving innovation and excellence in software solutions since 2021.</p>
+        <a href="#services" class="button">Explore Our Services</a>
+    </div>
+
+    <div class="container">
+        <section id="about" class="section">
+            <h2>About Us</h2>
+            <p>Capital Cloud Trading, established in Muscat, Oman, in 2021, delivers cutting-edge software solutions to empower businesses. We are proud Odoo Silver Partners, blending local expertise with global standards to foster innovation and growth.</p>
+        </section>
+
+        <section id="values" class="section">
+            <h2>Our Values</h2>
+            <ul>
+                <li><strong>Innovation:</strong> Embracing new ideas to solve challenges.</li>
+                <li><strong>Integrity:</strong> Building trust through transparency.</li>
+                <li><strong>Excellence:</strong> Striving for the highest quality in all we do.</li>
+            </ul>
+        </section>
+
+        <section id="services" class="section">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Custom Software Development</li>
+                <li>Odoo Implementation & Support</li>
+                <li>Business Process Automation</li>
+                <li>Technical Consulting</li>
+            </ul>
+            <a href="#contact" class="button">Contact Us</a>
+        </section>
+
+        <section id="visual-identity" class="section">
+            <h2>Visual Identity</h2>
+            <h3>Logo</h3>
+            <p>Our logo reflects our commitment to innovation and excellence:</p>
+            <img src="logo.svg" alt="Official Logo" style="max-width: 200px; margin: 20px auto; display: block;">
+            <h3>Color Palette</h3>
+            <div class="color-swatch">
+                <div class="color-box primary">#2263AE</div>
+                <div class="color-box secondary">#243243</div>
+                <div class="color-box highlight">#FFC857</div>
+            </div>
+            <h3>Typography</h3>
+            <p>Our primary font is <strong>Inter</strong>, chosen for its modern and clean appearance.</p>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:info@cco.om">info@cco.om</a></p>
+            <p>Phone: <a href="tel:+96897998688">+968 9799 8688</a></p>
+            <p>Address: <a href="https://www.google.com/maps?q=Muscat,+Oman" target="_blank">Muscat, Oman</a></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Capital Cloud Trading. Crafted with excellence.</p>
+    </footer>
+</body>
+</html>
